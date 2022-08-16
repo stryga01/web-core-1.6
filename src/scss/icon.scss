@@ -1,0 +1,18 @@
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: $color-btn;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s;
+  &:hover{
+    box-shadow: 0 0 15px $color-btn;
+  }
+  &:focus-visible{
+    outline: 2px solid #275649;
+  }
+}

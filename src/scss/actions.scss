@@ -1,0 +1,74 @@
+.actions{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px;
+  border-bottom: $color-border-blue 1px  solid;
+  background-color: white;
+  @media (min-width: $screen-table) {
+    padding: 15px 25px;
+  }
+  @media (min-width: $screen-desktop) {
+    padding: 0;
+    background-color: #F8F8F8;
+    border: none;
+  }
+  &::before{
+    display: block;
+    content: "";
+    width: 2px;
+    background-color: #EAEAEA;
+    height: 32px;
+    @media (min-width: $screen-table) {
+      display: none;
+    }
+  }
+  &__list{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    &::before{
+      @media (min-width: $screen-table) {
+        display: block;
+        content: "";
+        width: 2px;
+        background-color: #EAEAEA;
+        height: 32px;
+      }
+      @media (min-width: $screen-desktop) {
+        display: none;
+      }
+    }
+    &:first-child{
+      order: -1;
+    }
+    &:nth-child(2) .actions__item:first-child{
+      display: none;
+    }
+    &:nth-child(1){
+      order: -1;
+    }
+    &:nth-child(2) .actions__item:nth-child(1){
+      @media (min-width: $screen-table) {
+        display: flex;
+      }
+    }
+  }
+  &__item:nth-child(1){
+    order: -1;
+  }
+  &__sublist{
+    display: flex;
+    gap: 16px;
+    @media (min-width: $screen-desktop) {
+      gap:36px;
+    }
+  }
+  &__list:nth-child(1), &__list:nth-child(2) &__item:not(:last-child){
+    @media (min-width: $screen-desktop) {
+      display: none;
+    }
+  }
+}
+

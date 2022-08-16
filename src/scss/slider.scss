@@ -1,0 +1,69 @@
+
+.slider{
+  @media (min-width: $screen-table) {
+    padding: 0;
+  }
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 4px;
+    width: 24px;
+    background: linear-gradient(to left, white, transparent );
+    z-index: 2;
+    @media (min-width: $screen-table) {
+      display: none;
+    }
+  }
+  &__list{
+    @media (min-width: $screen-table) {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 24px;
+      row-gap: 16px;
+    }
+    @media (min-width: $screen-desktop) {
+      column-gap: 32px;
+    }
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: transparent;
+    transition: linear 0.2s;
+    @media (min-width: $screen-table) {
+      flex-shrink: 1;
+      width: 224px;
+    }
+    @media (min-width: $screen-desktop) {
+      width: 240px;
+    }
+    &:hover{
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+  }
+  &__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+    background: url(../img/icons/arrow.svg) no-repeat center center;
+    transition: 0.2s;
+    &:hover{
+      box-shadow: 0 0 15px #FF3E79;
+    }
+  }
+}
+

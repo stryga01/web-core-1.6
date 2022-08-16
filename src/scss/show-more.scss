@@ -1,0 +1,28 @@
+.show-more{
+  font-weight: 500;
+  line-height: 24px;
+  position: relative;
+  background: none;
+  border: none;
+  padding-left: 24px;
+  cursor: pointer;
+  display: none;
+  @media (min-width: $screen-table) {
+    display: block;
+  }
+  &:hover{
+   opacity: 0.5;
+ }
+  &::before{
+    display: block;
+    content: '';
+    width: 8px;
+    height: 11px;
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    background: url("../img/icons/expand.svg") no-repeat;
+  }
+}
+

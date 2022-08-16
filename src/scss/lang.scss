@@ -1,0 +1,25 @@
+
+.lang{
+  &__list{
+    width: min-content;
+    display: flex;
+    gap: 7px;
+  }
+  &__input{
+    -webkit-appearance: none;
+    position: absolute;
+    &:checked ~ .lang__text{
+      opacity: 0.6;
+    }
+  }
+  &__text{
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 24px;
+    transition: 0.1s;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+}

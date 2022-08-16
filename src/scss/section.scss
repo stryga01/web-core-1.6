@@ -1,0 +1,40 @@
+.section{
+  margin: 0  auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: #D9FFF5 1px solid;
+  @media (min-width: $screen-table) {
+    align-items: flex-start;
+  }
+  &__title{
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    background: #fff;
+    padding: 16px;
+    @media (min-width: $screen-table) {
+      width: 100%;
+      padding: 16px 0;
+      background-image: linear-gradient(to right, $color-bg, white);
+    }
+  }
+  &__container{
+    transition: linear 0.3s;
+    max-height: 336px;
+    position: relative;
+    @media (min-width: $screen-table) {
+      overflow: hidden;
+    }
+    &_closed{
+      max-height: 167px;
+    }
+  }
+  &__btn_open::before{
+    transform-origin: center;
+    transform: rotate(180deg) translateY(-50%);
+  }
+}

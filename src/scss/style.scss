@@ -1,0 +1,55 @@
+@import "reset.css";
+@import "variables.scss";
+@import "fonts";
+@import "show-more";
+@import "about-us";
+@import "side-menu";
+@import "header";
+@import "actions";
+@import "icon";
+@import "nav";
+@import "section";
+@import "slider";
+@import "swiper";
+@import "lang";
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  background: none;
+}
+
+html {
+  font-family: $font-family-main;
+  color: $color-main;
+}
+
+.wrapper-main{
+  margin: 0 auto;
+  width: max-content;
+  height: 1500px;
+}
+
+.wrapper {
+  width: 320px;
+  background: #f8f8f8;
+
+}
+
+@media (min-width: 768px) {
+  .wrapper{
+    min-width: 768px;
+  }
+
+}
+
+@media (min-width: 1120px) {
+  .wrapper{
+    min-width: 1120px;
+  }
+  .wrapper-main{
+    display: flex;
+  }
+}

@@ -1,0 +1,55 @@
+.nav{
+  padding: 0 15px;
+  @media (min-width: $screen-table) {
+    padding: 0 25px;
+  }
+  @media (min-width: $screen-desktop) {
+    padding: 0 30px;
+  }
+  &__list{
+    display: flex;
+    overflow: scroll;
+    min-width: 300px;
+    padding: 2px;
+    list-style-type: none;
+    -ms-overflow-style: none;
+    @media (min-width: $screen-table) {
+      min-width: 740px;
+    }
+    @media (min-width: $screen-desktop) {
+      min-width: 1063px;
+      overflow: auto;
+      flex-wrap: wrap;
+    }
+    &::-webkit-scrollbar{
+      width: 0;
+      @media (min-width: $screen-table) {
+        width: 0;
+      }
+    }
+  }
+  &__item {
+    flex: 0 0 auto;
+    margin: 2px;
+    &:hover{
+      outline: 2px solid #B8FFEC;
+      border-radius: 6px;
+    }
+  }
+  &__link{
+    font-weight: 500;
+    font-size: 16px;
+    background: none;
+    padding: 12px;
+    display: block;
+    color: #7E7E82;
+    text-decoration: none;
+    &:active{
+      background: none;
+    }
+    &:focus-visible{
+      border-radius: 6px;
+    }
+  }
+}
+
