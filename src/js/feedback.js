@@ -1,84 +1,60 @@
-let popup = document.querySelectorAll('.popup');
-let feedback = document.querySelector('.feedback')
-console.log(popup);
-let popupClose = document.querySelector('.popup__close');
-let feedbackBtns = document.querySelectorAll('.feedback-btn');
+let feedbackBtnsOpen = document.querySelectorAll('.feedback-btn');
+let callbackBtnsOpen = document.querySelectorAll('.callback-btn');
+let closePopup = document.querySelectorAll('.popup__close')
+let feedbackPopup = document.querySelector('.feedback');
+let callbackPopup = document.querySelector('.callback');
 let blur = document.querySelector('.blur');
-let callbackBtns = document.querySelectorAll('.callback-btn')
+let popups = document.querySelectorAll('.popup');
 
-
-// popupBtns.forEach((btn) =>{
-//   btn.addEventListener('click', () =>{
-//     popup.classList.add('popup_open')
-//     document.body.style.overflow = 'hidden';
-//     blur.classList.add('blur__popup')
-//     blur.addEventListener('click', () =>{
-//       popup.classList.remove('popup_open')
-//       document.body.style.overflow = 'auto';
-//       blur.classList.remove('blur__popup')
-//     })
-//   })
-// })
-//
-// popupClose.addEventListener('click', () => {
-//   popup.classList.remove('popup_open')
-//   document.body.style.overflow = 'auto';
-//   blur.classList.remove('blur__popup')
-// })
-
-//
-// callbackBtns.forEach((btn) =>{
-//   btn.addEventListener('click', () =>{
-//     popup.classList.add('popup_open')
-//     document.body.style.overflow = 'hidden';
-//     blur.classList.add('blur__popup')
-//     blur.addEventListener('click', () =>{
-//       popup.classList.remove('popup_open')
-//       document.body.style.overflow = 'auto';
-//       blur.classList.remove('blur__popup')
-//     })
-//   })
-// })
-//
-// popupClose.addEventListener('click', () => {
-//   popup.classList.remove('popup_open')
-//   document.body.style.overflow = 'auto';
-//   blur.classList.remove('blur__popup')
-// })
-
-// blur.addEventListener('click', ()=>{
-//
-// })
-
-function addListener(openBtns, closeBtn, popup){
-  openBtns.forEach((button)=>{
-    button.addEventListener('click', () => {
-
-      if(popup.classList.contains('popup_open')){
-        closePopup(popup)
-      }
-      else {
-        openPopup(popup);
-      }
-
-    })
+feedbackBtnsOpen.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    feedbackPopup.classList.add('popup_open');
+    document.body.style.overflow = 'hidden';
+    blur.classList.add('blur__popup');
   })
-}
+})
 
-function openPopup(popup){
-  popup.classList.add('popup_open');
-  document.body.style.overflow = 'hidden';
-  blur.classList.add('blur__popup');
-}
+callbackBtnsOpen.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    callbackPopup.classList.add('popup_open');
+    document.body.style.overflow = 'hidden';
+    blur.classList.add('blur__popup');
+  })
+})
 
-function closePopup(popup){
-  popup.classList.remove('popup_open')
+
+
+
+
+
+
+
+closePopup.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    popups.forEach((popup) => {
+      popup.classList.remove('popup_open');
+    })
+    document.body.style.overflow = 'auto';
+    blur.classList.remove('blur__popup')
+  })
+})
+
+
+
+
+
+
+
+
+
+blur.addEventListener('click', () => {
+  popups.forEach((popup) => {
+    popup.classList.remove('popup_open');
+  })
   document.body.style.overflow = 'auto';
   blur.classList.remove('blur__popup')
-}
+})
 
-addListener(feedbackBtns,feedback);
-addListener(popupClose,feedback)
 
 
 

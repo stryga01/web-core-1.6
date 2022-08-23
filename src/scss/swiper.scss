@@ -1,5 +1,9 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal{
-  bottom: -30px;
+  position: static;
+}
+
+.swiper-wrapper{
+  width: 320px;
 }
 
 .swiper-pagination-bullet{
@@ -19,6 +23,9 @@
   }
   .swiper-pagination{
     display: none;
+  }
+  .swiper-wrapper{
+    width: auto;
   }
 }
 

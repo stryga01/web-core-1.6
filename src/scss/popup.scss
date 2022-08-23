@@ -80,6 +80,11 @@
   }
   &__submit{
     align-self: flex-end;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover{
+      box-shadow: 0 0 15px $color-btn;
+    }
     &::before{
       content: '';
       display: block;

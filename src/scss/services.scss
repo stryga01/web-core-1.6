@@ -28,6 +28,43 @@
       display: flex;
     }
   }
+  &__title-item{
+    display: none;
+    @media (min-width: $screen-table) {
+      color:#7E7E82;
+      font-weight: 500;
+      padding: 16px;
+      display: flex;
+      gap: 20px;
+    }
+    @media (min-width: $screen-desktop) {
+      gap: 111px;
+    }
+  }
+  &__title-name{
+    @media (min-width: $screen-table) {
+      flex-grow: 1;
+    }
+
+  }
+  &__title-price{
+    @media (min-width: $screen-table) {
+      width: 74px;
+      flex-shrink: 0;
+    }
+  }
+  &__title-time{
+    @media (min-width: $screen-table) {
+      width: 81px;
+      flex-shrink: 0;
+    }
+  }
+  &__title-empty{
+    @media (min-width: $screen-table) {
+      width: 120px;
+      flex-shrink: 0;
+    }
+  }
   &__item{
     display: flex;
     flex-direction: column;

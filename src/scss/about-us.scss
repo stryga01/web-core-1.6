@@ -23,24 +23,32 @@
       flex: 1 1 50%;
     }
     @media (min-width: $screen-desktop) {
-      flex: 1 1 auto;
+      flex: 1 1 50%;
     }
   }
   &__wrapper{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 88px;
+    height: auto;
+    max-height: 88px;
     overflow: hidden;
     letter-spacing: 0.2px;
     line-height: 18px;
     font-size: 14px;
+    transition: linear 0.2s;
     @media (min-width: $screen-table) {
       line-height: 20px;
-      height: 158px;
+      max-height: 158px;
     }
-    & p{
-      flex: 1 1 auto;
+    &_open{
+      max-height: 380px;
+      @media (min-width: $screen-table) {
+        max-height: 390px;
+      }
+      @media (min-width: $screen-desktop) {
+        max-height: 260px;
+      }
     }
   }
   &__image{
@@ -51,9 +59,12 @@
       flex: 1 0 50%;
     }
     @media(min-width: $screen-desktop){
-      width: 532px;
-      flex: 0 1 auto;
+      //width: 532px;
+      flex: 1 1 50%;
     }
+  }
+  &__btn.show-more{
+    display: block;
   }
 }
 

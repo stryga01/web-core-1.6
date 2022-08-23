@@ -13,18 +13,16 @@
     padding: 2px;
     list-style-type: none;
     -ms-overflow-style: none;
-    @media (min-width: $screen-table) {
-      min-width: 740px;
-    }
     @media (min-width: $screen-desktop) {
-      min-width: 1063px;
       overflow: auto;
       flex-wrap: wrap;
     }
     &::-webkit-scrollbar{
       width: 0;
+      height: 0;
       @media (min-width: $screen-table) {
         width: 0;
+        height: 0;
       }
     }
   }
@@ -34,6 +32,7 @@
     &:hover{
       outline: 2px solid #B8FFEC;
       border-radius: 6px;
+      background: #fff;
     }
   }
   &__link{

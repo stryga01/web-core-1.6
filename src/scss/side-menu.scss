@@ -1,24 +1,27 @@
 .side-menu{
   display: flex;
-  max-height: 100vh;
+  height: 100vh;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  flex: 1 0 320px;
 
   position: fixed;
   top: 0;
-  left: -350px;
+  left: -390px;
 
   width: 320px;
-  height: 100vh;
   background: #ffffff;
-  padding: 18px 16px 32px;
+  padding: 18px 16px 50px;
   box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
-  z-index: 2;
+  z-index: 100;
   transition: left 0.3s;
-  @media (min-width: $screen-desktop) {
-    position: static;
+  @media (min-width:$screen-desktop) {
+    position: sticky;
     box-shadow: none;
+  }
+  &_open{
+    left:0;
   }
   &__top{
     display: flex;

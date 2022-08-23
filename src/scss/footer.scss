@@ -1,0 +1,49 @@
+
+.footer{
+  border-top: 1px solid #D9FFF5;
+  &__list{
+    padding: 30px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @media (min-width: $screen-table) {
+      padding: 30px 24px 25px;
+      flex-direction: row;
+    }
+    @media (min-width: $screen-desktop) {
+      padding: 30px 30px 20px;
+    }
+  }
+  &__item{
+    text-align: center;
+    color: #7E7E82;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    opacity: 72%;
+    @media (min-width: $screen-table) {
+      flex-basis: 33.333%;
+    }
+    &:first-child{
+      @media (min-width: $screen-table) {
+        text-align: left;
+      }
+    }
+    &:nth-child(2){
+      @media (min-width: $screen-table) {
+        text-align: center;
+      }
+    }
+    &:last-child{
+      @media (min-width: $screen-table) {
+        text-align: right;
+      }
+    }
+  }
+  &__link{
+    transition: 0.2s;
+    &:hover{
+      color: $color-btn;
+    }
+  }
+}

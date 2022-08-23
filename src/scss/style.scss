@@ -1,6 +1,7 @@
 @import "reset.css";
 @import "variables.scss";
 @import "fonts";
+@import "main";
 @import "show-more";
 @import "about-us";
 @import "side-menu";
@@ -8,11 +9,17 @@
 @import "actions";
 @import "icon";
 @import "nav";
+@import "sections";
 @import "section";
-@import "slider";
+@import "brands";
+@import "device-type";
+@import "services";
 @import "swiper";
-@import "lang";
 
+@import "lang";
+@import "popup";
+@import "submit-btn";
+@import "footer";
 *{
   margin: 0;
   padding: 0;
@@ -26,30 +33,48 @@ html {
   color: $color-main;
 }
 
+
 .wrapper-main{
+  display: flex;
   margin: 0 auto;
-  width: max-content;
-  height: 1500px;
+  max-width: 1440px;
+  //height: 1500px;
+
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   width: 320px;
-  background: #f8f8f8;
-
-}
-
-@media (min-width: 768px) {
-  .wrapper{
-    min-width: 768px;
+  margin: 0 auto;
+  background: $color-bg;
+  @media (min-width: $screen-table) {
+    width: 768px;
   }
-
-}
-
-@media (min-width: 1120px) {
-  .wrapper{
+  @media (min-width: $screen-desktop) {
     min-width: 1120px;
   }
-  .wrapper-main{
-    display: flex;
+
+}
+
+.blur{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  opacity: 0.95;
+  display: none;
+  &__popup{
+    z-index: 109;
+    display: block;
+  }
+  &__side-menu{
+    z-index:99;
+    display: block;
   }
 }
+
+
