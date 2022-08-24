@@ -1,13 +1,5 @@
 
 .device-type{
-  @media (min-width: $screen-table) {
-    max-height: 162px;
-  }
-  &_open{
-    @media (min-width: $screen-table) {
-      max-height: 340px;
-    }
-  }
   &__slider{
     width: 305px;
     @media (min-width: $screen-table) {

@@ -3,14 +3,16 @@
 @import "fonts";
 @import "main";
 @import "show-more";
-@import "about-us";
+@import "logo";
 @import "side-menu";
 @import "header";
 @import "actions";
 @import "icon";
 @import "nav";
 @import "sections";
+
 @import "section";
+@import "about-us";
 @import "brands";
 @import "device-type";
 @import "services";
@@ -20,13 +22,7 @@
 @import "popup";
 @import "submit-btn";
 @import "footer";
-*{
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  background: none;
-}
+
 
 html {
   font-family: $font-family-main;
@@ -35,6 +31,7 @@ html {
 
 
 .wrapper-main{
+  position: relative;
   display: flex;
   margin: 0 auto;
   max-width: 1440px;
@@ -66,7 +63,7 @@ html {
   bottom: 0;
   background-color: white;
   opacity: 0.95;
-  display: none;
+  display: block;
   &__popup{
     z-index: 109;
     display: block;

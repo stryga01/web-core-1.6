@@ -23,11 +23,6 @@
   &_open{
     left:0;
   }
-  &__top{
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-   }
   &__header-list{
     display: flex;
     align-items: center;
@@ -74,30 +69,31 @@
     }
 
   }
-  &__bottom{
+  &__section{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    &-mail{
-      text-align: left;
-      font-weight: 500;
-      line-height: 24px;
-      transition: 0.1s;
-      cursor: pointer;
-      &:hover{
-        opacity: 0.6;
-      }
+    &:first-child{
+      gap: 22px;
     }
-    &-phone{
-      text-align: left;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 32px;
-      transition: 0.1s;
-      cursor: pointer;
-      &:hover{
-        opacity: 0.6;
-      }
+  }
+  &__mail{
+    text-align: left;
+    font-weight: 500;
+    line-height: 24px;
+    transition: 0.1s;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+  &__phone{
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    transition: 0.1s;
+    &:hover{
+      opacity: 0.6;
     }
   }
   &__contacts{

@@ -3,6 +3,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    background: none;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -12,4 +13,8 @@
 a{
     text-decoration: none;
     color: inherit;
+}
+
+button{
+  cursor: pointer;
 }

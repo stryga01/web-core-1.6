@@ -8,7 +8,7 @@
 <body>
 <div class='wrapper-main'>
   <aside class='side-menu'>
-    <div class='side-menu__top'>
+    <div class='side-menu__section'>
       <ul class='side-menu__header-list'>
         <li class='side-menu__header-item'>
           <button class='icon burger_close'>
@@ -39,7 +39,7 @@
         </ul>
       </nav>
     </div>
-    <div class='side-menu__bottom'>
+    <div class='side-menu__section'>
       <div class='side-menu__contacts'>
         <ul class='side-menu__contacts-list'>
           <li class='side-menu__contacts-item'>
@@ -58,8 +58,8 @@
             </a>
           </li>
         </ul>
-        <button class='side-menu__bottom-mail'>mail@cps.com</button>
-        <button class='side-menu__bottom-phone'>8 800 890 8900</button>
+        <button class='side-menu__mail'>mail@cps.com</button>
+        <button class='side-menu__phone'>8 800 890 8900</button>
       </div>
       <ul class='lang__list'>
         <li>
@@ -154,26 +154,29 @@
       </ul>
     </nav>
     <main class='main'>
-      <article class='about-us'>
-        <div class='about-us__text'>
-          <div class='about-us__wrapper about-us__wrapper_close'>
-            <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-              Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
-              производителя.</p>
-            <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
-              что подтверждает большое количество постоянных клиентов.
-              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас
-              родным и близким.</p>
-            <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
-              что подтверждает большое количество постоянных клиентов.
-              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас
-              родным и близким.</p>
-          </div>
-          <button class='show-more about-us__btn'>Читать далее</button>
-        </div>
-        <img src='img/images/banner.jpg' class='about-us__image' alt='cps'>
-      </article>
+
       <div class='sections'>
+        <section class='section about-us'>
+          <div class='about-us__text'>
+            <div class='about-us__wrapper'>
+              <p class='about-us__paragraph'>Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+                Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
+                производителя.</p>
+              <p class='about-us__paragraph'>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+                что подтверждает большое количество постоянных клиентов.
+                Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас
+                родным и близким.</p>
+              <p class='about-us__paragraph'>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+                что подтверждает большое количество постоянных клиентов.
+                Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас
+                родным и близким.</p>
+            </div>
+            <button class='show-more about-us__btn'>Читать далее</button>
+          </div>
+          <div class='about-us__container-image'>
+            <img class='about-us__image' src='img/images/banner.jpg'  alt='cps'>
+          </div>
+        </section>
         <section class='section'>
           <h2 class='section__title'>Ремонт техники различных брендов</h2>
           <div class='section__container brands '>
@@ -506,7 +509,7 @@
     </footer>
   </div>
   <div class='popup callback'>
-    <button class='icon popup__close'>
+    <button class='icon popup__close callback__close'>
       <img src='./img/icons/close.svg' alt='close menu'>
     </button>
     <h2 class='popup__title'>Заказать звонок</h2>
@@ -521,7 +524,7 @@
     </form>
   </div>
   <div class='popup feedback'>
-    <button class='icon popup__close'>
+    <button class='icon popup__close feedback__close'>
       <img src='./img/icons/close.svg' alt='close menu'>
     </button>
     <h2 class='popup__title'>Обратная связь</h2>
@@ -540,7 +543,7 @@
   </div>
 
 
-  <div class='blur popup__blur side-menu__blur'></div>
+<!--  <div class='blur blur__popup blur__side-menu'></div>-->
 </div>
 
 </body>

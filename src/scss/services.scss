@@ -1,4 +1,5 @@
 .services{
+  max-height: none;
   @media (min-width: $screen-table) {
     width: 768px;
   }
@@ -136,7 +137,6 @@
     color: white;
     background-color: $color-btn;
     border-radius: 16px;
-    cursor: pointer;
     transition: 0.2s;
     @media (min-width: $screen-table) {
       position: relative;

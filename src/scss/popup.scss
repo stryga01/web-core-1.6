@@ -6,7 +6,7 @@
   gap: 24px;
   padding: 24px 16px;
   position: fixed;
-  left:-600px;
+  right:-600px;
   top: 0;
   z-index: 110;
   transition: 0.2s;
@@ -17,15 +17,9 @@
   @media (min-width: $screen-desktop) {
     width: 440px;
     padding: 32px;
-    left: auto;
-    right: -600px;
   }
   &_open{
-    left:0;
-    @media (min-width: $screen-desktop) {
-      left: auto;
-      right: 0;
-    }
+    right:0;
   }
   &__close{
     flex-shrink: 0;
@@ -65,6 +59,7 @@
     padding: 12px 16px;
     border: 1px solid #EAEAEA;
     border-radius: 8px;
+    resize: none;
     @media (min-width: $screen-desktop) {
       width: 376px;
     }
@@ -81,7 +76,6 @@
   &__submit{
     align-self: flex-end;
     transition: 0.2s;
-    cursor: pointer;
     &:hover{
       box-shadow: 0 0 15px $color-btn;
     }

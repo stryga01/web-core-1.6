@@ -7,10 +7,9 @@ import './device-type'
 import './swiper';
 import './about-us';
 import './feedback';
+import './callback';
 
-
-
-
+export let wrapperMain = document.querySelector('.wrapper-main');
 
 
 

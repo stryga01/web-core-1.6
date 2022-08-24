@@ -1,14 +1,14 @@
 
 .brands{
   @media (min-width: $screen-table) {
-    max-height: 162px;
+    //max-height: 162px;
   }
   &_open{
     @media (min-width: $screen-table) {
-      max-height: 360px;
+      //max-height: 360px;
     }
     @media (min-width: $screen-desktop) {
-      max-height: 275px;
+      //max-height: 275px;
     }
   }
   &__slider{
